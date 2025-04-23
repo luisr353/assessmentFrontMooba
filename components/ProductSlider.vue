@@ -4,7 +4,7 @@
     <div class="swiper">
       <div class="swiper-wrapper">
         <div v-for="product in products" :key="product.id" class="swiper-slide slide-product">
-          <div class="product-item" :class="{ agotado: !product.available }">
+          <div class="product-item bg-white" :class="{ agotado: !product.available }">
             <div class="item">
               <div class="image">
                 <a :href="product.url">
@@ -21,7 +21,7 @@
                   <div v-if="!product.available" class="descuento">No disponible</div>
                 </a>
                 <div class="button-add">
-                  <button @click="addToCart(product.id)">
+                  <button @click="addToCart(product.id)" class="bg-primary">
                     <img src="/assets/icons/cart-button.svg" alt="" style="width:20px; padding-right: 7px">Agregar
                   </button>
                 </div>
@@ -63,8 +63,8 @@ const products = ref<Product[]>([
   {
     id: '370180',
     title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
-    price: 29300,
-    content: 'unidad a 2,441.67',
+    price: 10250,
+    content: 'gramo a $109',
     image: 'assets/products/product_1.png',
     url: '/products/product1/370180', 
     available: true
@@ -72,8 +72,8 @@ const products = ref<Product[]>([
   {
     id: '370180',
     title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
-    price: 29300,
-    content: 'unidad a 2,441.67',
+    price: 10250,
+    content: 'gramo a $109',
     image: 'assets/products/product_1.png',
     url: '/products/product1/370180', 
     available: true
@@ -81,8 +81,8 @@ const products = ref<Product[]>([
   {
     id: '370180',
     title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
-    price: 29300,
-    content: 'unidad a 2,441.67',
+    price: 10250,
+    content: 'gramo a $109',
     image: 'assets/products/product_1.png',
     url: '/products/product1/370180', 
     available: true
@@ -90,8 +90,8 @@ const products = ref<Product[]>([
   {
     id: '370180',
     title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
-    price: 29300,
-    content: 'unidad a 2,441.67',
+    price: 10250,
+    content: 'gramo a $109',
     image: 'assets/products/product_1.png',
     url: '/products/product1/370180', 
     available: true
@@ -99,8 +99,8 @@ const products = ref<Product[]>([
   {
     id: '370180',
     title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
-    price: 29300,
-    content: 'unidad a 2,441.67',
+    price: 10250,
+    content: 'gramo a $109',
     image: 'assets/products/product_1.png',
     url: '/products/product1/370180', 
     available: true
@@ -108,8 +108,8 @@ const products = ref<Product[]>([
   {
     id: '370180',
     title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
-    price: 29300,
-    content: 'unidad a 2,441.67',
+    price: 10250,
+    content: 'gramo a $109',
     image: 'assets/products/product_1.png',
     url: '/products/product1/370180', 
     available: true
@@ -117,8 +117,8 @@ const products = ref<Product[]>([
   {
     id: '370180',
     title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
-    price: 29300,
-    content: 'unidad a 2,441.67',
+    price: 10250,
+    content: 'gramo a $109',
     image: 'assets/products/product_1.png',
     url: '/products/product1/370180', 
     available: true
@@ -126,8 +126,8 @@ const products = ref<Product[]>([
   {
     id: '370180',
     title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
-    price: 29300,
-    content: 'unidad a 2,441.67',
+    price: 10250,
+    content: 'gramo a $109',
     image: 'assets/products/product_1.png',
     url: '/products/product1/370180', 
     available: true
@@ -135,8 +135,8 @@ const products = ref<Product[]>([
   {
     id: '370180',
     title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
-    price: 29300,
-    content: 'unidad a 2,441.67',
+    price: 10250,
+    content: 'gramo a $109',
     image: 'assets/products/product_1.png',
     url: '/products/product1/370180', 
     available: true
@@ -253,7 +253,7 @@ onMounted(() => {
 }
 
 .precio {
-  font-size: 1.2rem;
+  font-size: 1.5em;
   font-weight: bold;
   color: #000;
 }
@@ -265,9 +265,10 @@ onMounted(() => {
 }
 
 .contenido {
-  font-size: 0.8rem;
-  color: #666;
-  margin: 0.5rem 0;
+  font-size: 0.8em;
+    color: #666;
+    font-weight: 300;
+    margin: 0px 0px 10px 0px;
 }
 
 .descuento {
@@ -282,7 +283,6 @@ onMounted(() => {
   justify-content: center;
   width: 100%;
   padding: 0.5rem;
-  background: #007bff;
   color: white;
   border: none;
   border-radius: 100px;

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-white py-8">
+  <div class="w-full py-8">
     <div class="max-w-7xl mx-auto px-4">
       <div class="relative">
         <!-- Carrusel de productos destacados -->
@@ -18,7 +18,6 @@
                         :class="{ 'text-gray-400': index === featuredItems.length - 1, 'text-gray-800': index !== featuredItems.length - 1 }">
                     {{ item.title }}
                   </span>
-
               </a>
             </div>
           </div>
@@ -51,7 +50,7 @@ const featuredItems = [
   {
     title: 'Dermocosmética',
     image: '/assets/icons/start/dermocosmetica.png',
-    url: '/busqueda/[code]142284142285142286142287142288142289142290142291141989142271142275297017297018043048511630511632270048270046270049000708810979109796953421386104386101386102386106386103386105386108386107384322'
+    url: '/busqueda/[code]86107384322'
   },
   {
     title: 'Antigripales',
