@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=22.0.0"
+    "node": "20.11.1"
   },
   "scripts": {
     "build": "nuxt build",
@@ -17,8 +17,8 @@
     "@pinia/nuxt": "^0.5.1",
     "@nuxtjs/tailwindcss": "^6.11.4",
     "estree-walker": "2.0.2",
-    "entities": "^4.5.0",
-    "nuxt": "^3.16.2",
+    "entities": "4.4.0",
+    "nuxt": "^3.10.3",
     "pinia": "^2.1.7",
     "postcss": "^8.4.35",
     "postcss-import": "^16.0.1",
