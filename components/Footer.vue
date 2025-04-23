@@ -57,7 +57,7 @@
 				</div>
 
                 -->
-				<div id="redes-cont">
+				<div id="redes">
 					<h4 style="margin-bottom: 5px;">Síguenos en:</h4>
 					<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@droguerialaeconomia9474"><img src="/assets/youtube.svg" alt="youtube"></a>
 					<a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/droguerialaeconomia/"><img src="/assets/instagram.svg" alt="instagram"></a>
@@ -88,3 +88,31 @@
 
 <script lang="ts" setup>
 </script>
+
+<style scoped>
+#redes {
+  display: flex;
+}
+
+#redes h4 {
+  color: #2A354F;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#redes a {
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
+#redes img {
+  width: 32px;
+  height: 32px;
+}
+
+#redes img:hover {
+  transform: none;
+}
+</style>

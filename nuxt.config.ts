@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  css: ['~/assets/css/main.css'],
 
   modules: [
     '@nuxtjs/tailwindcss',
@@ -50,11 +51,11 @@ export default defineNuxtConfig({
     optimizeDeps: {
       include: ['vue', 'pinia', 'vue-toastification']
     },
+    
     server: {
       fs: {
         strict: false
       },
-      port: 3001
     },
     resolve: {
       alias: {
