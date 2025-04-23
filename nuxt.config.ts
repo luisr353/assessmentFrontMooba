@@ -56,15 +56,27 @@ export default defineNuxtConfig({
         target: 'esnext'
       }
     },
+    preset: 'vercel',
+    externals: {
+      inline: ['unhead', 'entities']
+    }
   },
 
   build: {
-    transpile: ['pinia', 'vue', 'estree-walker', 'vue-toastification']
+    transpile: ['pinia', 'vue', 'estree-walker', 'vue-toastification', 'entities']
   },
 
   vite: {
+    ssr: {
+      noExternal: ['entities']
+    },
     optimizeDeps: {
-      include: ['vue', 'pinia', 'estree-walker', 'vue-toastification']
+      include: ['vue', 'pinia', 'estree-walker', 'vue-toastification', 'entities']
+    },
+    server: {
+      fs: {
+        strict: false
+      },
     },
     resolve: {
       alias: {
@@ -79,6 +91,9 @@ export default defineNuxtConfig({
       minify: 'esbuild'
     }
   },
+
+  ssr: true,
+  
   experimental: {
     payloadExtraction: false
   },
