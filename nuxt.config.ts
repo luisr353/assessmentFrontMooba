@@ -51,19 +51,25 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    preset: 'vercel',
+    esbuild: {
+      options: {
+        target: 'esnext'
+      }
+    },
+    preset: 'vercel'
   },
 
   build: {
-    transpile: ['pinia', 'vue', 'estree-walker','vue-toastification']
-
+    transpile: ['pinia', 'vue', 'estree-walker', 'vue-toastification']
   },
 
   vite: {
+    ssr: {
+      noExternal: []
+    },
     optimizeDeps: {
       include: ['vue', 'pinia', 'estree-walker', 'vue-toastification']
     },
-    
     server: {
       fs: {
         strict: false
