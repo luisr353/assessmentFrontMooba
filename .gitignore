@@ -22,3 +22,21 @@ logs
 .env
 .env.*
 !.env.example
+
+# Vercel
+/.vercel/
+
+# Vercel logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Vercel config
+lpm.config.json
+
+# Nuxt config
+.nuxtrc
+
+# TypeScript build info
+*.tsbuildinfo

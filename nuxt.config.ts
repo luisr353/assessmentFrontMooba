@@ -56,10 +56,6 @@ export default defineNuxtConfig({
         target: 'esnext'
       }
     },
-    preset: 'vercel',
-    externals: {
-      inline: ['unhead']
-    }
   },
 
   build: {
@@ -67,16 +63,8 @@ export default defineNuxtConfig({
   },
 
   vite: {
-    ssr: {
-      noExternal: []
-    },
     optimizeDeps: {
       include: ['vue', 'pinia', 'estree-walker', 'vue-toastification']
-    },
-    server: {
-      fs: {
-        strict: false
-      },
     },
     resolve: {
       alias: {
@@ -91,9 +79,6 @@ export default defineNuxtConfig({
       minify: 'esbuild'
     }
   },
-
-  ssr: true,
-  
   experimental: {
     payloadExtraction: false
   },
