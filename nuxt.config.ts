@@ -18,7 +18,6 @@ export default defineNuxtConfig({
       autoprefixer: {},
     }
   },  
-
   app: {
     head: {
       title: 'Droguería La Economía | Comprometidos con tu bienestar',
