@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="bg-slate-50">
     <TopBanner />
     <Navigation />
     <MainMenu />
@@ -8,8 +8,10 @@
       <FeaturedProducts />
       <BannerMedium />
       <ProductSlider />
+      <PromoSlider />
     </div>
   </div>
+  <Footer />
 </template>
 
 <script setup lang="ts">
@@ -20,4 +22,5 @@ import PromoSlider from '~/components/PromoSlider.vue'
 import FeaturedProducts from '~/components/FeaturedProducts.vue'
 import ProductSlider from '~/components/ProductSlider.vue'
 import BannerMedium from '~/components/BannerMedium.vue'
+import Footer from '~/components/Footer.vue'
 </script>
