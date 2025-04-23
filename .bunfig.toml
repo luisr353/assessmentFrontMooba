@@ -1,0 +1,8 @@
+[install]
+peer = true
+hoist = true
+
+[install.scopes]
+vue = true
+pinia = true
+nuxt = true 
