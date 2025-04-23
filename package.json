@@ -7,7 +7,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare && bun run build"
   },
   "dependencies": {
     "@pinia/nuxt": "0.5.1",
@@ -15,12 +15,15 @@
     "pinia": "2.1.7",
     "swiper": "^11.2.6",
     "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
-  },
-  "devDependencies": {
+    "vue-router": "^4.5.0",
     "@nuxtjs/tailwindcss": "^6.13.2",
     "postcss": "^8.5.3",
-    "postcss-import": "^16.1.0",
     "tailwindcss": "3.3.0"
-  }
+  },
+  "devDependencies": {
+    "postcss-import": "^16.1.0"
+  },
+  "trustedDependencies": [
+    "@parcel/watcher"
+  ]
 }
