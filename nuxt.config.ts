@@ -7,6 +7,14 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
   ],
 
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
+    configPath: 'tailwind.config.js',
+    exposeConfig: false,
+    injectPosition: 0,
+    viewer: true,
+  },
+
   postcss: {
     plugins: {
       tailwindcss: {},
