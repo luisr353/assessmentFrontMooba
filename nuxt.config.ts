@@ -56,7 +56,10 @@ export default defineNuxtConfig({
         target: 'esnext'
       }
     },
-    preset: 'vercel'
+    preset: 'vercel',
+    externals: {
+      inline: ['unhead']
+    }
   },
 
   build: {
