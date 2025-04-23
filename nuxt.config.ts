@@ -11,7 +11,6 @@ export default defineNuxtConfig({
     cssPath: '~/assets/css/tailwind.css',
     configPath: 'tailwind.config.js',
     exposeConfig: false,
-    injectPosition: 0,
     viewer: true,
   },
 
@@ -51,6 +50,10 @@ export default defineNuxtConfig({
     }
   },
 
+  nitro: {
+    preset: 'vercel',
+  },
+
   build: {
     transpile: ['pinia', 'vue', 'vue-toastification']
   },
@@ -79,12 +82,10 @@ export default defineNuxtConfig({
     }
   },
 
-  nitro: {
-    esbuild: {
-      options: {
-        target: 'node18'
-      }
-    }
+  ssr: true,
+  
+  experimental: {
+    payloadExtraction: false
   },
 
   compatibilityDate: '2025-04-21'
