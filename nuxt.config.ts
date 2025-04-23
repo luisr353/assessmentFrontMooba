@@ -71,10 +71,6 @@ export default defineNuxtConfig({
     }
   },
 
-  experimental: {
-    inlineSSRStyles: false
-  },
-
   nitro: {
     esbuild: {
       options: {
