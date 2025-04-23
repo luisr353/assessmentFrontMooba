@@ -55,12 +55,13 @@ export default defineNuxtConfig({
   },
 
   build: {
-    transpile: ['pinia', 'vue', 'vue-toastification']
+    transpile: ['pinia', 'vue', 'estree-walker','vue-toastification']
+
   },
 
   vite: {
     optimizeDeps: {
-      include: ['vue', 'pinia', 'vue-toastification']
+      include: ['vue', 'pinia', 'estree-walker', 'vue-toastification']
     },
     
     server: {
