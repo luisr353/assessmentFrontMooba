@@ -1,5 +1,5 @@
 <template>
-  <section class="py-12 px-4 max-w-7xl mx-auto">
+  <section class="py-12 px-4 w-full mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Botiquín Card -->
       <div class="bg-white p-6 rounded-lg relative">

@@ -10,12 +10,13 @@
       <ProductSlider />
       <ProductCategories />
       <ProductsMoreSearched />
+      <SliderWellness />
       <BannerFinish />
-      <PromoSlider />
-      
+      <SliderBrandsFeatured />
+      <SliderMarcas class="pb-10" />
     </div>
   </div>
-  <Footer />
+  <Footer class="mt-10"/>
 </template>
 
 <script setup lang="ts">
@@ -29,4 +30,7 @@ import ProductSlider from '~/components/ProductSlider.vue'
 import BannerMedium from '~/components/BannerMedium.vue'
 import Footer from '~/components/Footer.vue'
 import BannerFinish from './components/BannerFinish.vue'
+import SliderMarcas from './components/SliderMarcas.vue'
+import SliderWellness from './components/SliderWellness.vue'
+import SliderBrandsFeatured from './components/SliderBrandsFeatured.vue'
 </script>

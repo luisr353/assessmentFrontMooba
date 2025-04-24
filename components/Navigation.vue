@@ -1,7 +1,7 @@
 <template>
   <!-- Desktop Navigation -->
   <nav class="bg-white shadow-sm py-4 hidden md:block">
-    <div class="max-w-7xl mx-auto px-4">
+    <div class="container mx-auto px-4">
       <div class="flex items-center justify-between">
         <!-- Logo -->
         <div class="flex-shrink-0">

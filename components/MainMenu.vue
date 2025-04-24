@@ -1,7 +1,7 @@
 <template>
   <!-- Menú Desktop - Solo se muestra si no está en modo mobile-only -->
   <div v-if="!mobileOnly" class="w-full bg-primary text-white hidden md:block">
-    <div class="max-w-7xl mx-auto">
+    <div class="container mx-auto">
       <nav class="flex">
         <div v-for="(menu, index) in menus" 
              :key="index" 
