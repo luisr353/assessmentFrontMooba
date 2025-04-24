@@ -1,17 +1,21 @@
 <template>
-  <div class="relative w-full h-[420px] overflow-hidden">
+  <div class="relative w-screen md:w-full overflow-hidden">
     <!-- Slides -->
-    <div class="flex transition-transform duration-500 ease-in-out h-full" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
-      <div v-for="(slide, index) in slides" :key="index" class="w-full h-full flex-shrink-0">
-        <img :src="slide.image" :alt="slide.alt" class="w-full h-full object-cover" />
+    <div class="flex transition-transform duration-500 ease-in-out" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
+      <div v-for="(slide, index) in slides" :key="index" class="w-screen md:w-full flex-shrink-0">
+        <img 
+          :src="slide.image" 
+          :alt="slide.alt" 
+          class="w-full h-auto object-contain" 
+        />
       </div>
     </div>
 
     <!-- Navigation buttons -->
-    <button @click="prevSlide" class="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-primary flex items-center justify-center hover:bg-primary-600 focus:outline-none">
+    <button @click="prevSlide" class="hidden md:flex absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-primary items-center justify-center hover:bg-primary-600 focus:outline-none">
       <img src="/assets/icons/chevron-left.svg" alt="Previous" class="w-6 h-6 invert" />
     </button>
-    <button @click="nextSlide" class="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-primary flex items-center justify-center hover:bg-primary-600 focus:outline-none">
+    <button @click="nextSlide" class="hidden md:flex absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 rounded-full bg-primary items-center justify-center hover:bg-primary-600 focus:outline-none">
       <img src="/assets/icons/chevron-right.svg" alt="Next" class="w-6 h-6 invert" />
     </button>
 
@@ -21,7 +25,7 @@
         v-for="(_, index) in slides" 
         :key="index"
         @click="goToSlide(index)"
-        class="w-3 h-3 rounded-full transition-colors duration-200"
+        class="w-2 h-2 md:w-3 md:h-3 rounded-full transition-colors duration-200"
         :class="index === currentSlide ? 'bg-primary' : 'bg-white'"
       ></button>
     </div>
@@ -90,5 +94,14 @@ onUnmounted(() => {
 <style scoped>
 .transition-transform {
   transition: transform 0.5s ease-in-out;
+}
+
+/* Ajustes para móvil */
+@media (max-width: 768px) {
+  .w-screen {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
 }
 </style> 

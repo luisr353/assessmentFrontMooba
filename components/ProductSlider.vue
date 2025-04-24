@@ -43,9 +43,10 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import Swiper from 'swiper'
-import { Navigation } from 'swiper/modules'
+import { Navigation, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
+import 'swiper/css/autoplay'
 
 interface Product {
   id: string;
@@ -62,7 +63,7 @@ interface Product {
 const products = ref<Product[]>([
   {
     id: '370180',
-    title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
+    title: "Crema Pond's Clarant B3 Piel Normal A Grasa Porte x 100G",
     price: 10250,
     content: 'gramo a $109',
     image: 'assets/products/product_1.png',
@@ -71,7 +72,7 @@ const products = ref<Product[]>([
   },
   {
     id: '370180',
-    title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
+    title: "Crema Pond's Clarant B3 Piel Normal A Grasa Porte x 100G",
     price: 10250,
     content: 'gramo a $109',
     image: 'assets/products/product_1.png',
@@ -80,7 +81,7 @@ const products = ref<Product[]>([
   },
   {
     id: '370180',
-    title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
+    title: "Crema Pond's Clarant B3 Piel Normal A Grasa Porte x 100G",
     price: 10250,
     content: 'gramo a $109',
     image: 'assets/products/product_1.png',
@@ -89,7 +90,7 @@ const products = ref<Product[]>([
   },
   {
     id: '370180',
-    title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
+    title: "Crema Pond's Clarant B3 Piel Normal A Grasa Porte x 100G",
     price: 10250,
     content: 'gramo a $109',
     image: 'assets/products/product_1.png',
@@ -98,7 +99,7 @@ const products = ref<Product[]>([
   },
   {
     id: '370180',
-    title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
+    title: "Crema Pond's Clarant B3 Piel Normal A Grasa Porte x 100G",
     price: 10250,
     content: 'gramo a $109',
     image: 'assets/products/product_1.png',
@@ -107,7 +108,7 @@ const products = ref<Product[]>([
   },
   {
     id: '370180',
-    title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
+    title: "Crema Pond's Clarant B3 Piel Normal A Grasa Porte x 100G",
     price: 10250,
     content: 'gramo a $109',
     image: 'assets/products/product_1.png',
@@ -116,7 +117,7 @@ const products = ref<Product[]>([
   },
   {
     id: '370180',
-    title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
+    title: "Crema Pond's Clarant B3 Piel Normal A Grasa Porte x 100G",
     price: 10250,
     content: 'gramo a $109',
     image: 'assets/products/product_1.png',
@@ -125,7 +126,7 @@ const products = ref<Product[]>([
   },
   {
     id: '370180',
-    title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
+    title: "Crema Pond's Clarant B3 Piel Normal A Grasa Porte x 100G",
     price: 10250,
     content: 'gramo a $109',
     image: 'assets/products/product_1.png',
@@ -134,7 +135,7 @@ const products = ref<Product[]>([
   },
   {
     id: '370180',
-    title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
+    title: "Crema Pond's Clarant B3 Piel Normal A Grasa Porte x 100G",
     price: 10250,
     content: 'gramo a $109',
     image: 'assets/products/product_1.png',
@@ -143,7 +144,7 @@ const products = ref<Product[]>([
   },
   {
     id: '370180',
-    title: "Crema Pond’s Clarant B3 Piel Normal A Grasa Porte x 100G",
+    title: "Crema Pond's Clarant B3 Piel Normal A Grasa Porte x 100G",
     price: 29300,
     content: 'unidad a 2,441.67',
     image: 'assets/products/product_1.png',
@@ -169,12 +170,17 @@ const addToCart = (productId: string) => {
 
 onMounted(() => {
   new Swiper('.swiper', {
-    modules: [Navigation],
+    modules: [Navigation, Autoplay],
     slidesPerView: 6,
     spaceBetween: 32,
     navigation: {
       nextEl: '.swiper-button-next-eco',
       prevEl: '.swiper-button-prev-eco',
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true
     },
     loop: true,
   })

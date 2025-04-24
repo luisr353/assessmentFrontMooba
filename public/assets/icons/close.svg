@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.557 15.556" id="undefined" height="16px"
+    width="16px" class="ng-star-inserted">
+    <g data-name="Group 1755" transform="translate(-243.722 -126.722)" id="undefined">
+        <line id="Line_3" data-name="Line 3" y2="20"
+            transform="translate(258.571 127.429) rotate(45)" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-width="1"></line>
+        <line id="Line_4" data-name="Line 4" y1="20"
+            transform="translate(244.429 127.429) rotate(-45)" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-width="1"></line>
+    </g>
+</svg>

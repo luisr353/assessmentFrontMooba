@@ -6,10 +6,13 @@
     <div class="container mx-auto">
       <PromoSlider />
       <FeaturedProducts />
-      <ProductCategories />
       <BannerMedium />
       <ProductSlider />
+      <ProductCategories />
+      <ProductsMoreSearched />
+      <BannerFinish />
       <PromoSlider />
+      
     </div>
   </div>
   <Footer />
@@ -25,4 +28,5 @@ import ProductCategories from '~/components/ProductCategories.vue'
 import ProductSlider from '~/components/ProductSlider.vue'
 import BannerMedium from '~/components/BannerMedium.vue'
 import Footer from '~/components/Footer.vue'
+import BannerFinish from './components/BannerFinish.vue'
 </script>
