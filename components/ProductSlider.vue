@@ -1,40 +1,42 @@
 <template>
   <div class="banner">
     <div class="titulo-grande pb-5 font-semibold cursor-default flex justify-start items-center">Las mejores ofertas <div class="icono"><img src="/assets/icons/alarma.png" alt="" style="width: 24px"></div> <div class="vertodo" onclick="parent.location='/busqueda/[sales]'">Ver todos</div></div>
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        <div v-for="product in products" :key="product.id" class="swiper-slide slide-product">
-          <div class="product-item bg-white" :class="{ agotado: !product.available }">
-            <div class="item">
-              <div class="image">
-                <a :href="product.url">
-                  <img :src="product.image" :alt="product.title" @error="handleImageError">
-                </a>
-              </div>
-              <div class="info">
-                <a :href="product.url">
-                  <div class="titulo">{{ product.title }}</div>
-                  <div class="precio">${{ formatPrice(product.price) }}</div>
-                  <div v-if="product.oldPrice" class="antes">${{ formatPrice(product.oldPrice) }}</div>
-                  <div class="contenido">{{ product.content }}</div>
-                  <div v-if="product.discount" class="descuento"><b>{{ product.discount }}%</b></div>
-                  <div v-if="!product.available" class="descuento">No disponible</div>
-                </a>
-                <div class="button-add">
-                  <button @click="addToCart(product.id)" class="bg-primary">
-                    <img src="/assets/icons/cart-button.svg" alt="" style="width:20px; padding-right: 7px">Agregar
-                  </button>
+    <div class="swiper-container">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div v-for="product in products" :key="product.id" class="swiper-slide slide-product">
+            <div class="product-item bg-white" :class="{ agotado: !product.available }">
+              <div class="item">
+                <div class="image">
+                  <a :href="product.url">
+                    <img :src="product.image" :alt="product.title" @error="handleImageError">
+                  </a>
+                </div>
+                <div class="info">
+                  <a :href="product.url">
+                    <div class="titulo">{{ product.title }}</div>
+                    <div class="precio">${{ formatPrice(product.price) }}</div>
+                    <div v-if="product.oldPrice" class="antes">${{ formatPrice(product.oldPrice) }}</div>
+                    <div class="contenido">{{ product.content }}</div>
+                    <div v-if="product.discount" class="descuento"><b>{{ product.discount }}%</b></div>
+                    <div v-if="!product.available" class="descuento">No disponible</div>
+                  </a>
+                  <div class="button-add">
+                    <button @click="addToCart(product.id)" class="bg-primary">
+                      <img src="/assets/icons/cart-button.svg" alt="" style="width:20px; padding-right: 7px">Agregar
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="swiper-button-prev-eco bg-primary">
-        <img src="/assets/icons/left.svg" alt="" style="width:20px">
-      </div>
-      <div class="swiper-button-next-eco bg-primary">
-        <img src="/assets/icons/right.svg" alt="" style="width:20px">
+        <div class="swiper-button-prev-eco bg-primary">
+          <img src="/assets/icons/left.svg" alt="" style="width:20px">
+        </div>
+        <div class="swiper-button-next-eco bg-primary">
+          <img src="/assets/icons/right.svg" alt="" style="width:20px">
+        </div>
       </div>
     </div>
   </div>
@@ -169,7 +171,7 @@ const addToCart = (productId: string) => {
 }
 
 onMounted(() => {
-  new Swiper('.swiper', {
+  const swiper = new Swiper('.swiper', {
     modules: [Navigation, Autoplay],
     slidesPerView: 6,
     spaceBetween: 32,
@@ -183,6 +185,24 @@ onMounted(() => {
       pauseOnMouseEnter: true
     },
     loop: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+      },
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 25,
+      },
+      1024: {
+        slidesPerView: 6,
+        spaceBetween: 32,
+      },
+    },
   })
 })
 </script>
@@ -194,6 +214,44 @@ onMounted(() => {
   padding: 0 64px;
   position: relative;
 }
+
+.swiper-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  width: auto;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 0 20px;
+  }
+
+  .swiper-slide {
+    width: calc(50% - 5px) !important;
+  }
+
+  .product-item {
+    margin: 0 5px;
+  }
+
+  .swiper-button-prev-eco {
+    left: 5px;
+  }
+
+  .swiper-button-next-eco {
+    right: 5px;
+  }
+}
+
 .titulo-grande {
     color: #111;
     font-size: 1.4em;

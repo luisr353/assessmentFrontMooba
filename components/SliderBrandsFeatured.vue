@@ -6,7 +6,7 @@
         <swiper
           :modules="[SwiperAutoplay, SwiperNavigation]"
           :slides-per-view="slidesPerView"
-          :space-between="20"
+          :space-between="5"
           :loop="true"
           :autoplay="{
             delay: 3000,
@@ -20,7 +20,7 @@
         >
           <swiper-slide v-for="(product, index) in products" :key="index">
             <div class="flex flex-col items-center">
-              <div class="bg-white rounded-full p-4 mb-3 w-[180px] h-[180px] flex items-center justify-center">
+              <div class="bg-white rounded-full p-4 mb-3 w-[120px] h-[120px] flex items-center justify-center">
                 <img :src="product.image" class="max-w-full max-h-full object-contain">
               </div>
             </div>
@@ -76,7 +76,7 @@
   
   const slidesPerView = computed(() => {
     if (typeof window !== 'undefined') {
-      if (window.innerWidth < 640) return 2
+      if (window.innerWidth < 640) return 3
       if (window.innerWidth < 768) return 3
       if (window.innerWidth < 1024) return 4
       return 5
