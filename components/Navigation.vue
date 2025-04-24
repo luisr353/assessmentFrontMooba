@@ -71,10 +71,12 @@
 
           <!-- Carrito -->
           <div class="relative">
-            <img src="/assets/icons/cart.svg" alt="Carrito" class="w-6 h-6">
-            <span class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
-              1
-            </span>
+            <button @click="toggleCart" class="flex items-center">
+              <img src="/assets/icons/cart.svg" alt="Carrito" class="w-6 h-6">
+              <span v-if="totalItems > 0" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                {{ totalItems }}
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -95,12 +97,12 @@
         <a href="/cupones">
           <img src="/assets/icons/coupon.svg" alt="Cupones" class="w-6 h-6">
         </a>
-        <a href="/carrito" class="relative">
+        <button @click="toggleCart" class="relative">
           <img src="/assets/icons/cart.svg" alt="Carrito" class="w-6 h-6">
-          <span class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
-            1
+          <span v-if="totalItems > 0" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+            {{ totalItems }}
           </span>
-        </a>
+        </button>
       </div>
     </div>
 
@@ -146,33 +148,39 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import MainMenu from './MainMenu.vue'
+import { useCartStore } from '../stores/cart'
+import { storeToRefs } from 'pinia'
 
 const isMenuOpen = ref(false)
 const isLocationDropdownOpen = ref(false)
-const selectedCity = ref('barranquilla')
+const selectedCity = ref('Bogotá')
 
 const cities = [
-  { id: '20011', name: 'aguachica' },
-  { id: '63001', name: 'armenia' },
-  { id: '68081', name: 'barrancabermeja' },
-  { id: '08001', name: 'barranquilla' },
-  { id: '11001', name: 'bogotá' },
-  { id: '68001', name: 'bucaramanga' },
-  { id: '76111', name: 'buga' },
-  { id: '76001', name: 'cali' },
-  { id: '76130', name: 'candelaria' },
-  { id: '13001', name: 'cartagena' },
-  { id: '76147', name: 'cartago' },
-  { id: '15176', name: 'chiquinquira' },
-  { id: '47189', name: 'cienaga' },
-  { id: '54001', name: 'cucuta' },
-  { id: '76248', name: 'el cerrito' },
-  { id: '68276', name: 'floridablanca' },
-  { id: '25290', name: 'fusagasuga' },
-  { id: '68307', name: 'giron' },
-  { id: '73001', name: 'ibague' },
-  { id: '05360', name: 'itagui' }
+  { id: 1, name: 'Bogotá' },
+  { id: 2, name: 'Medellín' },
+  { id: 3, name: 'Cali' },
+  { id: 4, name: 'Barranquilla' },
+  { id: 5, name: 'Cartagena' },
+  { id: 6, name: 'Cúcuta' },
+  { id: 7, name: 'Bucaramanga' },
+  { id: 8, name: 'Pereira' },
+  { id: 9, name: 'Santa Marta' },
+  { id: 10, name: 'Ibagué' },
+  { id: 11, name: 'Manizales' },
+  { id: 12, name: 'Pasto' },
+  { id: 13, name: 'Neiva' },
+  { id: 14, name: 'Armenia' },
+  { id: 15, name: 'Villavicencio' },
+  { id: 16, name: 'Sincelejo' },
+  { id: 17, name: 'Popayán' },
+  { id: 18, name: 'Valledupar' },
+  { id: 19, name: 'Montería' },
+  { id: 20, name: 'Tunja' }
 ]
+
+const cartStore = useCartStore()
+const { totalItems } = storeToRefs(cartStore)
+const { toggleCart } = cartStore
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
@@ -182,8 +190,8 @@ const toggleLocationDropdown = () => {
   isLocationDropdownOpen.value = !isLocationDropdownOpen.value
 }
 
-const selectCity = (city: string) => {
-  selectedCity.value = city
+const selectCity = (cityName: string) => {
+  selectedCity.value = cityName
   isLocationDropdownOpen.value = false
 }
 </script>

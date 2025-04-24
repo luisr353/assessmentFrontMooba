@@ -3,6 +3,7 @@
     <TopBanner />
     <Navigation />
     <MainMenu />
+    <ShoppingCart />
     <div class="container mx-auto">
       <PromoSlider />
       <FeaturedProducts />
@@ -33,4 +34,5 @@ import BannerFinish from './components/BannerFinish.vue'
 import SliderMarcas from './components/SliderMarcas.vue'
 import SliderWellness from './components/SliderWellness.vue'
 import SliderBrandsFeatured from './components/SliderBrandsFeatured.vue'
+import ShoppingCart from '~/components/ShoppingCart.vue'
 </script>

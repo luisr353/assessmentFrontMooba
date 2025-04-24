@@ -49,6 +49,7 @@ import { Navigation, Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/autoplay'
+import { useCartStore } from '../stores/cart'
 
 interface Product {
   id: string;
@@ -156,6 +157,8 @@ const products = ref<Product[]>([
 
 ])
 
+const cartStore = useCartStore()
+
 const handleImageError = (e: Event) => {
   const img = e.target as HTMLImageElement
   img.src = '/assets/products/product_1.png' // imagen por defecto
@@ -166,8 +169,16 @@ const formatPrice = (price: number) => {
 }
 
 const addToCart = (productId: string) => {
-  // Implementar la lógica para agregar al carrito
-  console.log('Agregando producto:', productId)
+  const product = products.value.find(p => p.id === productId)
+  if (product && product.available) {
+    cartStore.addItem({
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      image: product.image
+    })
+    cartStore.toggleCart()
+  }
 }
 
 onMounted(() => {
