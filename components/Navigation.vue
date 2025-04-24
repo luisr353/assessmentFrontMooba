@@ -58,7 +58,7 @@
             <a href="/cuenta">
               <img src="/assets/icons/user.svg" alt="Usuario" class="w-6 h-6">
             </a>
-            <span>Edgardo</span>
+            <span>Luis R</span>
           </div>
 
           <!-- Cupones -->

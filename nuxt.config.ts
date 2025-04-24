@@ -22,30 +22,23 @@ export default defineNuxtConfig({
   },  
   app: {
     head: {
-      title: 'Droguería La Economía | Comprometidos con tu bienestar',
+      title: 'La Economía Droguería',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { 
+          hid: 'description', 
           name: 'description', 
-          content: 'Droguería La Economía. Encuentra un gran surtido en productos para la Salud y medicamentos. Cuidado del bebé, Cuidado Personal, Belleza, entre otros.'
+          content: 'Tu droguería de confianza con los mejores precios y productos'
         },
-        { 
-          name: 'keywords', 
-          content: 'Droguería virtual,Droguerías en colombia,Droguerías en Barranquilla,Droguerías en santa Marta,Droguerías en Cartagena,Droguerías en valledupar,Droguerías en Sincelejo,Droguerías en Bucaramanga,Droguerías en Bogota,Droguerías en Cali,Droguerías en ibague,Farmacia en ibague,Medicamentos a domicilios,Droguería con domicilio,Farmacia a domicilio'
-        },
-        { property: 'og:title', content: 'Droguería La Economía | Comprometidos con tu bienestar' },
-        { property: 'og:description', content: 'Droguería La Economía. Encuentra un gran surtido en productos para la Salud y medicamentos. Cuidado del bebé, Cuidado Personal, Belleza, entre otros.' },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://laeconomia.com' },
-        { property: 'og:image', content: '/images/og-image.jpg' },
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Droguería La Economía | Comprometidos con tu bienestar' },
-        { name: 'twitter:description', content: 'Droguería La Economía. Encuentra un gran surtido en productos para la Salud y medicamentos. Cuidado del bebé, Cuidado Personal, Belleza, entre otros.' },
-        { name: 'twitter:image', content: '/images/og-image.jpg' }
+        { name: 'format-detection', content: 'telephone=no' }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+        { 
+          rel: 'icon', 
+          type: 'image/png', 
+          href: '/assets/icons/icon_logo.png'
+        }
       ]
     }
   },
