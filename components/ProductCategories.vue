@@ -5,28 +5,28 @@
       <div class="bg-white p-6 rounded-lg relative">
         <div class="flex items-center gap-2 mb-4">
           <h2 class="text-2xl font-semibold">Botiquín</h2>
-          <div class="icono"><img src="/assets/icons/pildora.png" style="width: 24px"></div> 
+          <div class="icono"><img src="/assets/icons/pildora.png" loading="lazy" style="width: 24px"></div> 
         </div>
         <p class="text-gray-600 mb-6">La selección ideal de productos para tu cuidado en todo momento.</p>
         <div class="grid grid-cols-3 gap-4">
           <div class="text-center">
             <div class="relative">
               <div class="absolute inset-0 bg-gray-100 rounded-full -z-10"></div>
-              <img src="/assets/products/dolex.png" alt="Dolex" class="w-24 h-24 object-contain mx-auto relative z-10">
+              <img src="/assets/products/dolex.png"  loading="lazy" alt="Dolex" class="w-24 h-24 object-contain mx-auto relative z-10">
             </div>
             <p class="mt-2 text-sm font-medium">Cabeza y general</p>
           </div>
           <div class="text-center">
             <div class="relative">
               <div class="absolute inset-0 bg-gray-100 rounded-full -z-10"></div>
-              <img src="/assets/products/tos.png" alt="Advil" class="w-24 h-24 object-contain mx-auto relative z-10">
+              <img src="/assets/products/tos.png"  loading="lazy" alt="Advil" class="w-24 h-24 object-contain mx-auto relative z-10">
             </div>
             <p class="mt-2 text-sm font-medium">Tos</p>
           </div>
           <div class="text-center">
             <div class="relative">
               <div class="absolute inset-0 bg-gray-100 rounded-full -z-10"></div>
-              <img src="/assets/products/multivitaminico.png" alt="Zinc" class="w-24 h-24 object-contain mx-auto relative z-10">
+              <img src="/assets/products/multivitaminico.png"  loading="lazy" alt="Zinc" class="w-24 h-24 object-contain mx-auto relative z-10">
             </div>
             <p class="mt-2 text-sm font-medium">Multivitamínico</p>
           </div>
@@ -44,21 +44,21 @@
           <div class="text-center">
             <div class="relative">
               <div class="absolute inset-0 bg-gray-100 rounded-full -z-10"></div>
-              <img src="/assets/products/panal.png" alt="Huggies" class="w-24 h-24 object-contain mx-auto relative z-10">
+              <img src="/assets/products/panal.png"  loading="lazy" alt="Huggies" class="w-24 h-24 object-contain mx-auto relative z-10">
             </div>
             <p class="mt-2 text-sm font-medium">Pañales</p>
           </div>
           <div class="text-center">
             <div class="relative">
               <div class="absolute inset-0 bg-gray-100 rounded-full -z-10"></div>
-              <img src="/assets/products/nestogeno.png" alt="Nestogeno" class="w-24 h-24 object-contain mx-auto relative z-10">
+              <img src="/assets/products/nestogeno.png"  loading="lazy" alt="Nestogeno" class="w-24 h-24 object-contain mx-auto relative z-10">
             </div>
             <p class="mt-2 text-sm font-medium">Leches infantiles</p>
           </div>
           <div class="text-center">
             <div class="relative">
               <div class="absolute inset-0 bg-gray-100 rounded-full -z-10"></div>
-              <img src="/assets/products/panito.png" alt="Pañitos" class="w-24 h-24 object-contain mx-auto relative z-10">
+              <img src="/assets/products/panito.png"  loading="lazy" alt="Pañitos" class="w-24 h-24 object-contain mx-auto relative z-10">
             </div>
             <p class="mt-2 text-sm font-medium">Pañitos húmedos</p>
           </div>
@@ -76,21 +76,21 @@
           <div class="text-center">
             <div class="relative">
               <div class="absolute inset-0 bg-gray-100 rounded-full -z-10"></div>
-              <img src="/assets/products/facial.png" alt="Tratamiento facial" class="w-24 h-24 object-contain mx-auto relative z-10">
+              <img src="/assets/products/facial.png"  loading="lazy" alt="Tratamiento facial" class="w-24 h-24 object-contain mx-auto relative z-10">
             </div>
             <p class="mt-2 text-sm font-medium">Tratamiento facial</p>
           </div>
           <div class="text-center">
             <div class="relative">
               <div class="absolute inset-0 bg-gray-100 rounded-full -z-10"></div>
-              <img src="/assets/products/shampoo.png" alt="Shampoo" class="w-24 h-24 object-contain mx-auto relative z-10">
+              <img src="/assets/products/shampoo.png"  loading="lazy" alt="Shampoo" class="w-24 h-24 object-contain mx-auto relative z-10">
             </div>
             <p class="mt-2 text-sm font-medium">Shampoo y acondicionador</p>
           </div>
           <div class="text-center">
             <div class="relative">
               <div class="absolute inset-0 bg-gray-100 rounded-full -z-10"></div>
-              <img src="/assets/products/corporal.png" alt="Tratamiento corporal" class="w-24 h-24 object-contain mx-auto relative z-10">
+              <img src="/assets/products/corporal.png"  loading="lazy" alt="Tratamiento corporal" class="w-24 h-24 object-contain mx-auto relative z-10">
             </div>
             <p class="mt-2 text-sm font-medium">Tratamiento corporal</p>
           </div>
