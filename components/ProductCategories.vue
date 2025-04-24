@@ -99,7 +99,3 @@
     </div>
   </section>
 </template>
-
-<script setup lang="ts">
-// No se requiere lógica adicional por ahora
-</script> 

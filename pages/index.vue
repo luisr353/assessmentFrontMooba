@@ -7,9 +7,9 @@
         image-src="/images/banner-medium.png" 
         alt-text="Banner promocional"
       />
-      <ProductSlider />
+      <FeaturedOffers />
       <ProductCategories />
-      <ProductsMoreSearched />
+      <MostSearchedProducts />
       <SliderWellness />
       <Banner 
         image-src="/images/bn-vida-sana.png" 
@@ -27,10 +27,10 @@ import PromoSlider from '~/components/PromoSlider.vue'
 import FeaturedProducts from '~/components/FeaturedProducts.vue'
 import ProductCategories from '~/components/ProductCategories.vue'
 import Banner from '~/components/Banner.vue'
-import ProductSlider from '~/components/ProductSlider.vue'
-import ProductsMoreSearched from '~/components/ProductsMoreSearched.vue'
 import SliderWellness from '~/components/SliderWellness.vue'
 import SliderBrandsFeatured from '~/components/SliderBrandsFeatured.vue'
 import SliderMarcas from '~/components/SliderMarcas.vue'
+import FeaturedOffers from '~/components/FeaturedOffers.vue'
+import MostSearchedProducts from '~/components/MostSearchedProducts.vue'
 
 </script> 
