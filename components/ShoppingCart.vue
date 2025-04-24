@@ -1,3 +1,28 @@
+
+<script setup lang="ts">
+import { useCartStore } from '../stores/cart'
+import { storeToRefs } from 'pinia'
+
+const cartStore = useCartStore()
+const { items, isOpen, totalPrice } = storeToRefs(cartStore)
+const { toggleCart, removeItem, updateQuantity } = cartStore
+
+function formatPrice(price: number): string {
+  return new Intl.NumberFormat('es-CO', {
+    style: 'currency',
+    currency: 'COP',
+    minimumFractionDigits: 0
+  }).format(price)
+}
+
+function checkout() {
+  // Aquí iría la lógica para procesar el pago
+  alert('¡Gracias por tu compra!')
+  cartStore.clearCart()
+  toggleCart()
+}
+</script>
+
 <template>
   <div class="cart-container" :class="{ 'cart-open': isOpen }">
     <div class="cart-header">
@@ -39,29 +64,6 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { useCartStore } from '../stores/cart'
-import { storeToRefs } from 'pinia'
-
-const cartStore = useCartStore()
-const { items, isOpen, totalPrice } = storeToRefs(cartStore)
-const { toggleCart, removeItem, updateQuantity } = cartStore
-
-function formatPrice(price: number): string {
-  return new Intl.NumberFormat('es-CO', {
-    style: 'currency',
-    currency: 'COP',
-    minimumFractionDigits: 0
-  }).format(price)
-}
-
-function checkout() {
-  // Aquí iría la lógica para procesar el pago
-  alert('¡Gracias por tu compra!')
-  cartStore.clearCart()
-  toggleCart()
-}
-</script>
 
 <style scoped>
 .cart-container {

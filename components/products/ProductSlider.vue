@@ -83,6 +83,3 @@
   })
   </script>
   
-  <style scoped>
-  /* Tus estilos existentes (igual que antes) */
-  </style>

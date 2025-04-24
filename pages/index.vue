@@ -1,7 +1,18 @@
+<script setup lang="ts">
+import PromoSlider from '~/components/PromoSlider.vue'
+import FeaturedProducts from '~/components/FeaturedProducts.vue'
+import ProductCategories from '~/components/ProductCategories.vue'
+import Banner from '~/components/Banner.vue'
+import SliderWellness from '~/components/sliders/SliderWellness.vue'
+import SliderBrandsFeatured from '~/components/sliders/SliderBrandsFeatured.vue'
+import SliderMarcas from '~/components/SliderMarcas.vue'
+import FeaturedOffers from '~/components/FeaturedOffers.vue'
+import MostSearchedProducts from '~/components/MostSearchedProducts.vue'
+
+</script> 
 <template>
-  <div class="bg-slate-50">
-    <div class="container mx-auto">
-      <PromoSlider />
+  <PromoSlider />
+  <div id="home-cont" class="max-width bg-slate-50">
       <FeaturedProducts />
       <Banner 
         image-src="/images/banner-medium.png" 
@@ -19,18 +30,18 @@
       <SliderBrandsFeatured />
       <SliderMarcas class="pb-10" />
     </div>
-  </div>
 </template>
 
-<script setup lang="ts">
-import PromoSlider from '~/components/PromoSlider.vue'
-import FeaturedProducts from '~/components/FeaturedProducts.vue'
-import ProductCategories from '~/components/ProductCategories.vue'
-import Banner from '~/components/Banner.vue'
-import SliderWellness from '~/components/SliderWellness.vue'
-import SliderBrandsFeatured from '~/components/SliderBrandsFeatured.vue'
-import SliderMarcas from '~/components/SliderMarcas.vue'
-import FeaturedOffers from '~/components/FeaturedOffers.vue'
-import MostSearchedProducts from '~/components/MostSearchedProducts.vue'
+<style scoped>
+#home-cont {
+    position: relative;
+}
+.max-width {
+    max-width: 1600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 80px;
+}
+</style>
 
-</script> 
+

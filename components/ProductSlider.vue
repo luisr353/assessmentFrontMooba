@@ -1,47 +1,3 @@
-<template>
-  <div class="banner">
-    <div class="titulo-grande pb-5 font-semibold cursor-default flex justify-start items-center">Las mejores ofertas <div class="icono"><img src="/assets/icons/alarma.png" alt="" style="width: 24px"></div> <div class="vertodo" onclick="parent.location='/busqueda/[sales]'">Ver todos</div></div>
-    <div class="swiper-container">
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div v-for="product in products" :key="product.id" class="swiper-slide slide-product">
-            <div class="product-item bg-white" :class="{ agotado: !product.available }">
-              <div class="item">
-                <div class="image">
-                  <a :href="product.url">
-                    <img :src="product.image" :alt="product.title" @error="handleImageError">
-                  </a>
-                </div>
-                <div class="info">
-                  <a :href="product.url">
-                    <div class="titulo">{{ product.title }}</div>
-                    <div class="precio">${{ formatPrice(product.price) }}</div>
-                    <div v-if="product.oldPrice" class="antes">${{ formatPrice(product.oldPrice) }}</div>
-                    <div class="contenido">{{ product.content }}</div>
-                    <div v-if="product.discount" class="descuento"><b>{{ product.discount }}%</b></div>
-                    <div v-if="!product.available" class="descuento">No disponible</div>
-                  </a>
-                  <div class="button-add">
-                    <button @click="addToCart(product.id)" class="bg-primary">
-                      <img src="/assets/icons/cart-button.svg" alt="" style="width:20px; padding-right: 7px">Agregar
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-button-prev-eco bg-primary">
-          <img src="/assets/icons/left.svg" alt="" style="width:20px">
-        </div>
-        <div class="swiper-button-next-eco bg-primary">
-          <img src="/assets/icons/right.svg" alt="" style="width:20px">
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import Swiper from 'swiper'
@@ -217,6 +173,51 @@ onMounted(() => {
   })
 })
 </script>
+
+<template>
+  <div class="w-full mt-5">
+    <div class="titulo-grande pb-5 font-semibold cursor-default flex justify-start items-center">Las mejores ofertas <div class="icono"><img src="/assets/icons/alarma.png" alt="" style="width: 24px"></div> <div class="vertodo" onclick="parent.location='/busqueda/[sales]'">Ver todos</div></div>
+    <div class="swiper-container">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div v-for="product in products" :key="product.id" class="swiper-slide slide-product">
+            <div class="product-item bg-white" :class="{ agotado: !product.available }">
+              <div class="item">
+                <div class="image">
+                  <a :href="product.url">
+                    <img :src="product.image" :alt="product.title" @error="handleImageError">
+                  </a>
+                </div>
+                <div class="info">
+                  <a :href="product.url">
+                    <div class="titulo">{{ product.title }}</div>
+                    <div class="precio">${{ formatPrice(product.price) }}</div>
+                    <div v-if="product.oldPrice" class="antes">${{ formatPrice(product.oldPrice) }}</div>
+                    <div class="contenido">{{ product.content }}</div>
+                    <div v-if="product.discount" class="descuento"><b>{{ product.discount }}%</b></div>
+                    <div v-if="!product.available" class="descuento">No disponible</div>
+                  </a>
+                  <div class="button-add">
+                    <button @click="addToCart(product.id)" class="bg-primary">
+                      <img src="/assets/icons/cart-button.svg" alt="" style="width:20px; padding-right: 7px">Agregar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev-eco bg-primary">
+          <img src="/assets/icons/left.svg" alt="" style="width:20px">
+        </div>
+        <div class="swiper-button-next-eco bg-primary">
+          <img src="/assets/icons/right.svg" alt="" style="width:20px">
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
 
 <style scoped>
 .banner {

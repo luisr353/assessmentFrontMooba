@@ -1,6 +1,5 @@
 <template>
-  <div class="w-full py-8">
-    <div class="container mx-auto px-4">
+  <div class="w-full py-8 mx-auto px-4">
       <div class="relative">
         <!-- Carrusel de productos destacados -->
         <div class="flex justify-center overflow-hidden touch-pan-x">
@@ -41,7 +40,6 @@
         -->
       </div>
     </div>
-  </div>
 </template>
 
 <script setup lang="ts">
@@ -51,32 +49,32 @@ const featuredItems = [
   {
     title: 'Productos Estrella',
     image: '/assets/icons/start/productos-estrella.png',
-    url: '/busqueda/[banner]741'
+    url: '#'
   },
   {
     title: 'Dermocosmética',
     image: '/assets/icons/start/dermocosmetica.png',
-    url: '/busqueda/[code]86107384322'
+    url: '#'
   },
   {
     title: 'Antigripales',
     image: '/assets/icons/start/antigripales.png',
-    url: '/categoria/gripa,-tos/malestar-gripa'
+    url: '#'
   },
   {
     title: 'Snacks',
     image: '/assets/icons/start/snacks.png',
-    url: '/categoria/alimentos/snack'
+    url: '#'
   },
   {
     title: 'Mejores Ofertas',
     image: '/assets/icons/start/mejores-ofertas.png',
-    url: '/busqueda/[sales]'
+    url: '#'
   },
   {
     title: 'Día de salud y bienestar',
     image: '/assets/icons/start/dia-de-salud-y-bienestar-gris.png',
-    url: '/#'
+    url: '#'
   }
 ]
 
